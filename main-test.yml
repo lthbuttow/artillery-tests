@@ -1,0 +1,22 @@
+config:
+  target: 'https://jsonplaceholder.typicode.com'
+  phases:
+    - duration: 20
+      arrivalRate: 25
+  payload:
+    path: 'data.csv'
+    fields:
+      - "userId"
+      - "id"
+      - "title"
+      - "body"   
+scenarios:
+  - flow:
+    - post:
+        url: "/posts"
+        json:
+          userId: "{{ userId }}"
+          id: "{{ id }}"
+          title: "{{ title }}"
+          body: "{{ body }}"
+

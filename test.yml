@@ -1,0 +1,13 @@
+config:
+  target: 'https://reqres.in'
+  phases:
+    - duration: 5
+      arrivalRate: 5
+scenarios:
+  - flow:
+    - get:
+        url: "/api/login"
+        Authorization: "QpwL5tke4Pnpja7X4"
+        email: "eve.holt@reqres.in"
+        password: "cityslicka"
+
